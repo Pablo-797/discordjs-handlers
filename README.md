@@ -5,7 +5,7 @@
 &nbsp;
 ## ✅ Installation
 ```
-npm i discordjs-handlers
+npm i discordhandlers
 ```
 &nbsp;
 ## 📌 Event Handler
@@ -14,7 +14,7 @@ npm i discordjs-handlers
 #### Example:
 ```js
 const {Client, IntentsBitField} = require("discord.js"); 
-const DiscordJSHandlers = require("discordjs-handlers"); 
+const DiscordJSHandlers = require("discordhandlers"); 
 const {TOKEN} = require("./config.json"); 
 const client = new Client({intents: new IntentsBitField(["Guilds","GuildMessages"])}); 
 DiscordJSHandlers.events("events", client); // where "events" is events folder name
@@ -55,7 +55,7 @@ module.exports = {
 #### Example:
 ```js
 const {Client, IntentsBitField} = require("discord.js"); 
-const DiscordJSHandlers = require("discordjs-handlers"); 
+const DiscordJSHandlers = require("discordhandlers"); 
 const client = new Client({intents: new IntentsBitField(["Guilds","GuildMessages"])}); 
 DiscordJSHandlers.commands("commands", client, 'BOT TOKEN HERE'); // where "commands" is events folder name
 
@@ -85,7 +85,7 @@ module.exports = {
 #### Example:
 ```js
 const {Client, IntentsBitField} = require("discord.js"); 
-const DiscordJSHandlers = require("discordjs-handlers"); 
+const DiscordJSHandlers = require("discordhandlers"); 
 const {TOKEN} = require("./config.json"); 
 const client = new Client({intents: new IntentsBitField(["Guilds","GuildMessages"])}); 
 DiscordJSHandlers.events("buttons", client); // where "buttons" is buttons folder name
@@ -112,7 +112,7 @@ module.exports = {
 &nbsp;
 ## 💡 Example
 ```js
-const DiscordJSHandlers = require('discordjs-handlers'); //Requiring Discord-Handlers module.
+const DiscordJSHandlers = require('discordhandlers'); //Requiring Discord-Handlers module.
 const {Client, IntentsBitField} = require('discord.js'); //Requiring Discord.js module.
 const client = new Client({intents: new IntentsBitField(["Guilds", "GuildMessages"])}); //Creating new Discord.JS Client instance.
 
