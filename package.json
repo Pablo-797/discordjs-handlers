@@ -1,5 +1,5 @@
 {
-  "name": "@discordjs/handlers",
+  "name": "discord.js-handlers",
   "version": "1.0.0",
   "description": "Discord.JS v14 handlers in just one line.",
   "main": "index.js",
