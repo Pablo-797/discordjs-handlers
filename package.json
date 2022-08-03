@@ -1,0 +1,34 @@
+{
+  "name": "@discordjs/handlers",
+  "version": "1.0.0",
+  "description": "Discord.JS v14 handlers in just one line.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablo-797/discordjs-handlers.git"
+  },
+  "keywords": [
+    "discord",
+    "discordjs",
+    "discord.js",
+    "discordbot",
+    "discord-handlers",
+    "discordjs-handlers",
+    "command-handler",
+    "event-handler"
+  ],
+  "author": "_Pablo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pablo-797/discordjs-handlers/issues"
+  },
+  "homepage": "https://github.com/Pablo-797/discordjs-handlers#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.0.1",
+    "discord.js": "^14.1.2",
+    "fs": "^0.0.1-security"
+  }
+}
