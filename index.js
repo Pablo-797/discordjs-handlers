@@ -50,7 +50,7 @@ module.exports = {
             };
             await command.execute(interaction, client);
         });
-        if (show) console.log(`Loaded events: ${LoadedCommands.join(", ")}`);
+        if (show) console.log(`Loaded commands: ${LoadedCommands.join(", ")}`);
     },
     buttons: async(path, client, show) => {
         const LoadedButtons = [];
@@ -73,6 +73,6 @@ module.exports = {
             
             await button.execute(interaction, client);
         });
-        if (show) console.log(`Loaded events: ${LoadedButtons.join(", ")}`);
+        if (show) console.log(`Loaded buttons: ${LoadedButtons.join(", ")}`);
     }
 };
