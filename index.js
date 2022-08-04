@@ -13,7 +13,7 @@ module.exports = {
             else client.on(event.name, (...args) => event.execute(...args, client));
             LoadedEvents.push(event.name);
         };
-        if (show) console.log(`Loaded events: ${LoadedEvents}`);
+        if (show) console.log(`Loaded events: ${LoadedEvents.join(", ")}`);
     },
     commands: async(path, client, token, show) => {
         const LoadedCommands = [];
@@ -50,7 +50,7 @@ module.exports = {
             };
             await command.execute(interaction, client);
         });
-        if(show) console.log(LoadedCommands);
+        if (show) console.log(`Loaded events: ${LoadedCommands.join(", ")}`);
     },
     buttons: async(path, client, show) => {
         const LoadedButtons = [];
@@ -73,6 +73,6 @@ module.exports = {
             
             await button.execute(interaction, client);
         });
-        if(show) console.log(LoadedButtons);
+        if (show) console.log(`Loaded events: ${LoadedButtons.join(", ")}`);
     }
 };
