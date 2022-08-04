@@ -5,7 +5,7 @@
 &nbsp;
 ## ✅ Installation
 ```
-npm i discordhandlers
+npm i discordjs-handlers
 ```
 &nbsp;
 ## 📌 Event Handler
@@ -14,12 +14,11 @@ npm i discordhandlers
 #### Example:
 ```js
 const {Client, IntentsBitField} = require("discord.js"); 
-const DiscordJSHandlers = require("discordhandlers"); 
-const {TOKEN} = require("./config.json"); 
+const DiscordJSHandlers = require("discordjs-handlers"); 
 const client = new Client({intents: new IntentsBitField(["Guilds","GuildMessages"])}); 
 DiscordJSHandlers.events("events", client); // where "events" is events folder name
 
-client.login(TOKEN); // TOKEN is bot access token gained from discord developers portal
+client.login('BOT TOKEN HERE'); // TOKEN is bot access token gained from discord developers portal
 ```
 #### Examples of events:
 ```js
@@ -27,7 +26,7 @@ client.login(TOKEN); // TOKEN is bot access token gained from discord developers
 module.exports = {
     name: 'ready',
     once: true,
-    async execute(client) { // execute() is where you will pass the rest of needed arguments.
+    async execute(client) { // execute() is where you will pass the rest of needed arguments, client is always the last argument.
         console.log(`The bot is now online!`);
     },
 };
@@ -36,7 +35,7 @@ module.exports = {
 // messageCreate Event
 module.exports = {
 	name: 'messageCreate',
-	async execute(message, client) {
+	async execute(message, client) { // execute() is where you will pass the rest of needed arguments, client is always the last argument.
         console.log(`Message has been sent! Content: ${message.content}.`);
 	},
 };
@@ -55,7 +54,7 @@ module.exports = {
 #### Example:
 ```js
 const {Client, IntentsBitField} = require("discord.js"); 
-const DiscordJSHandlers = require("discordhandlers"); 
+const DiscordJSHandlers = require("discordjs-handlers"); 
 const client = new Client({intents: new IntentsBitField(["Guilds","GuildMessages"])}); 
 DiscordJSHandlers.commands("commands", client, 'BOT TOKEN HERE'); // where "commands" is events folder name
 
@@ -66,7 +65,7 @@ client.login('BOT TOKEN HERE'); // TOKEN is bot access token gained from discord
 // Ping Command
 module.exports = {
 	name: 'ping',
-	async execute(interaction, client) {
+	async execute(interaction, client) { // execute() is where you will pass the rest of needed arguments, client is always the last argument.
 		interaction.reply({content: `**Pong:**\n> Bot: \`${sentMessage.createdTimestamp - message.createdTimestamp}ms\``})
 	},
 };
@@ -85,7 +84,7 @@ module.exports = {
 #### Example:
 ```js
 const {Client, IntentsBitField} = require("discord.js"); 
-const DiscordJSHandlers = require("discordhandlers"); 
+const DiscordJSHandlers = require("discordjs-handlers"); 
 const {TOKEN} = require("./config.json"); 
 const client = new Client({intents: new IntentsBitField(["Guilds","GuildMessages"])}); 
 DiscordJSHandlers.events("buttons", client); // where "buttons" is buttons folder name
@@ -96,7 +95,7 @@ client.login(TOKEN); // TOKEN is bot access token gained from discord developers
 ```js
 module.exports = {
     id: 'verification',
-    async execute(interaction, client) { // execute() is where you will pass the rest of needed arguments.
+    async execute(interaction, client) { // execute() is where you will pass the rest of needed arguments, client is always the last argument.
         interaction.reply("Button clicked").
 	// do more stuff
     },
@@ -112,12 +111,12 @@ module.exports = {
 &nbsp;
 ## 💡 Example
 ```js
-const DiscordJSHandlers = require('discordhandlers'); //Requiring Discord-Handlers module.
+const DiscordJSHandlers = require('discordjs-handlers'); //Requiring DiscordJS-Handlers module.
 const {Client, IntentsBitField} = require('discord.js'); //Requiring Discord.js module.
 const client = new Client({intents: new IntentsBitField(["Guilds", "GuildMessages"])}); //Creating new Discord.JS Client instance.
 
-DiscordHandlers.events("events", client); //Running the event handler, where "events" is events folder name.
-DiscordHandlers.commands("commands", client, 'BOT TOKEN HERE'); //Running the command handler, where "commands" is commands folder name.
+DiscordHandlers.events("events", client); //Running the event handler
+DiscordHandlers.commands("commands", client, 'BOT TOKEN HERE'); //Running the command handler
 
 client.login('BOT TOKEN HERE');
 ```
